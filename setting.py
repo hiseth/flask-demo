@@ -13,7 +13,6 @@ class Config(object):
     WTF_CSRF_ENABLED = True
     SECRET_KEY = os.getenv('SECRET_KEY', default='A very terrible secret key')
 
-
 class DevelopmentConfig(Config):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(BASE_DIR, '/dev.db')
